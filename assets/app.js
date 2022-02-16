@@ -1,18 +1,9 @@
-let n = 1000;
-
-for (let i = 2; i <= n; i++) {
-    let flag = 1;
-    if (i > 2 && i % 2 != 0)
-    {
-        for (let j = 3; j*j <= i ; j=j+2)
-        {
-            if (i%j==0)
-            {
-                flag=0;
-                break;
-            }
-        }
+let a = +prompt("введите число")
+for(let i = 3; i < a; i++ ){
+    if(((a % i) == 0)) {
+      alert(`${a} простое`)
     }
-    else if (i != 2) flag = 0;
-    if (flag==1) {console.log(i);}
+   if((a % i) !=0){
+        alert(`${a} не простое`)
+    }
 }
